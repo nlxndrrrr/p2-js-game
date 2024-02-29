@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch Me Not!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="js-game-assets/PokebalBTN.png"
+    />
+  </head>
+  <body>
+    <div class="score-bar">
+      <h2>Catch Me Not!</h2>
+      <h2 id="score-txt">Score:</h2>
+      <!-- <h2>Score</h2> -->
+      <h2 id="score">0</h2>
+    </div>
+    <!-- <h1>Catch Me Not!</h1> -->
+    <!-- <h2>Score</h2> -->
+    <!-- <h2 id="score">0</h2> -->
+    <!-- Game Board -->
+    <div id="board"></div>
+    <div class="menu">
+      <button id="start">Start</button>
+      <button id="quit">Quit</button>
+      <button data-modal-target="#modal" id="instructions">Instructions</button>
+      <button id="music-btn" id="playPauseBTN" onclick="playPause()">
+        &#9658;
+      </button>
+      <audio
+        src="js-game-assets/Pokémon Ruby & Sapphire Music Medley.mp3"
+        id="audio"
+        type="audio/mpeg"
+      ></audio>
+
+      <!-- <div>
+        <audio
+          src="js-game-assets/Pokémon Ruby & Sapphire Music Medley.mp3"
+          id="audio"
+          type="audio/mpeg"
+        ></audio>
+        <button id="music-btn" id="playPauseBTN" onclick="playPause()">
+          &#9658;
+        </button>
+      </div> -->
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="ins-title">Instructions</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ol>
+          <li>Catch Meowth everytime he appear!!! + 10 Points</li>
+          <li>Avoid catching the Endangered Pokemon: Pikachu - Game Over!</li>
+        </ol>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </body>
+  <script src="index.js" defer></script>
+</html>
